@@ -1,6 +1,6 @@
 # TempMailOtp 🚀
 
-A Python script to **automate fetching (anys) OTP codes** from temporary emails using Playwright. 📧🔑
+A Python script to **automate fetching (any) OTP codes** from temporary emails using Playwright. 📧🔑
 
 ## Features 🌟
 - **Generates temporary email** via Emailnator. 📩
