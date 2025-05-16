@@ -1,2 +1,16 @@
-# TempMailOTP
-A simple tool that automatically generates a temporary email address and fetches the OTP (One-Time Password) sent to it. It's useful for automated verification processes and registering on services that require a temporary email — perfect for QA engineers, testers, and web scrapers.
+# OTPFetcher 🚀
+
+A Python script to **automate fetching Microsoft OTP codes** from temporary emails using Playwright. 📧🔑
+
+## Features 🌟
+- **Generates temporary email** via Emailnator. 📩
+- **Extracts OTP code** from Microsoft emails with ease. 🔍
+- **Saves email content and screenshots** for debugging purposes. 💾📸
+
+## Installation 🛠️
+Get started in a few simple steps:
+
+```bash
+pip install playwright
+playwright install
+```
