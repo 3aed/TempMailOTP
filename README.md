@@ -4,7 +4,7 @@ A Python script to **automate fetching (any) OTP codes** from temporary emails u
 
 ## Features 🌟
 - **Generates temporary email** via Emailnator. 📩
-- **Extracts OTP code** from Microsoft emails with ease. 🔍
+- **Extracts OTP code** from any emails with ease. 🔍
 - **Saves email content and screenshots** for debugging purposes. 💾📸
 
 ## Installation 🛠️
