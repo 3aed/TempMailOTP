@@ -2,13 +2,24 @@ from playwright.sync_api import sync_playwright
 import re
 import time
 # 3aed Hany FarajAllah
+
+
+headless_input = input("Do you want to run the browser in headless mode? (yes/no): ").strip().lower()
+
+headless = True if headless_input in ["yes", "y", "true"] else False
+
 def get_microsoft_otp():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=headless)
         page = browser.new_page()
         
         # go to emailnator
         page.goto("https://www.emailnator.com/")
+        
+        try:
+            page.locator("button.fc-cta-consent").click(timeout=3000)
+        except:
+            pass
         
         # 2. create a temporary email
         page.get_by_role("button", name="Go !").click()
@@ -24,6 +35,14 @@ def get_microsoft_otp():
         # the massege u want to click on it
         # replace it ( with what u need )
         page.get_by_role("link", name="Microsoft on behalf of MSC").click()
+
+        # To remove ads
+        page.evaluate("""
+        () => {
+            document.querySelectorAll('.ad, .popup, .overlay, .fc-dialog, .fc-banner').forEach(el => el.remove());
+        }
+        """)
+        
         time.sleep(2)
         try:
             
